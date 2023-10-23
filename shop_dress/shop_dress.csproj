@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A459655D-C10E-4F53-84D0-827CB95B3ED5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>shop_dress</RootNamespace>
+    <AssemblyName>shop_dress</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admZak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admZak.Designer.cs">
+      <DependentUpon>admZak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authorization.Designer.cs">
+      <DependentUpon>authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="katalog.cs" />
+    <Compile Include="magazinDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>magazinDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="magazinKatalogDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>magazinKatalogDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="magazinZakazDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>magazinZakazDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="regist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regist.Designer.cs">
+      <DependentUpon>regist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zakaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zakaz.Designer.cs">
+      <DependentUpon>zakaz.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admZak.resx">
+      <DependentUpon>admZak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authorization.resx">
+      <DependentUpon>authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="regist.resx">
+      <DependentUpon>regist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zakaz.resx">
+      <DependentUpon>zakaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="magazinDataSet.xsc">
+      <DependentUpon>magazinDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="magazinDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>magazinDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="magazinDataSet.xss">
+      <DependentUpon>magazinDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="magazinKatalogDataSet.xsc">
+      <DependentUpon>magazinKatalogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="magazinKatalogDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>magazinKatalogDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="magazinKatalogDataSet.xss">
+      <DependentUpon>magazinKatalogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="magazinZakazDataSet.xsc">
+      <DependentUpon>magazinZakazDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="magazinZakazDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>magazinZakazDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="magazinZakazDataSet.xss">
+      <DependentUpon>magazinZakazDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
